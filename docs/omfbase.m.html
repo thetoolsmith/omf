@@ -3,7 +3,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 
-    <title>ostackbase API documentation</title>
+    <title>omfbase API documentation</title>
     <meta name="description" content="Maintainer: ADAPT
 
 Author: Paul Bruno
@@ -1043,8 +1043,8 @@ table {
     <li class="set"><h3><a href="#header-variables">Module variables</a></h3>
       
   <ul>
-    <li class="mono"><a href="#ostackbase.env">env</a></li>
-    <li class="mono"><a href="#ostackbase.known_environments">known_environments</a></li>
+    <li class="mono"><a href="#omfbase.env">env</a></li>
+    <li class="mono"><a href="#omfbase.known_environments">known_environments</a></li>
   </ul>
 
     </li>
@@ -1052,12 +1052,12 @@ table {
     <li class="set"><h3><a href="#header-functions">Functions</a></h3>
       
   <ul>
-    <li class="mono"><a href="#ostackbase.check_client_args">check_client_args</a></li>
-    <li class="mono"><a href="#ostackbase.common_args">common_args</a></li>
-    <li class="mono"><a href="#ostackbase.dump_attributes">dump_attributes</a></li>
-    <li class="mono"><a href="#ostackbase.print_pretty_dict">print_pretty_dict</a></li>
-    <li class="mono"><a href="#ostackbase.trace">trace</a></li>
-    <li class="mono"><a href="#ostackbase.trace_wrapper">trace_wrapper</a></li>
+    <li class="mono"><a href="#omfbase.check_client_args">check_client_args</a></li>
+    <li class="mono"><a href="#omfbase.common_args">common_args</a></li>
+    <li class="mono"><a href="#omfbase.dump_attributes">dump_attributes</a></li>
+    <li class="mono"><a href="#omfbase.print_pretty_dict">print_pretty_dict</a></li>
+    <li class="mono"><a href="#omfbase.trace">trace</a></li>
+    <li class="mono"><a href="#omfbase.trace_wrapper">trace_wrapper</a></li>
   </ul>
 
     </li>
@@ -1065,15 +1065,15 @@ table {
     <li class="set"><h3><a href="#header-classes">Classes</a></h3>
       <ul>
         <li class="mono">
-        <span class="class_name"><a href="#ostackbase.OMFImport">OMFImport</a></span>
+        <span class="class_name"><a href="#omfbase.OMFImport">OMFImport</a></span>
         
         </li>
         <li class="mono">
-        <span class="class_name"><a href="#ostackbase.credentials">credentials</a></span>
+        <span class="class_name"><a href="#omfbase.credentials">credentials</a></span>
         
           
   <ul>
-    <li class="mono"><a href="#ostackbase.credentials.__init__">__init__</a></li>
+    <li class="mono"><a href="#omfbase.credentials.__init__">__init__</a></li>
   </ul>
 
         </li>
@@ -1091,7 +1091,7 @@ table {
 
 
   <header id="section-intro">
-  <h1 class="title"><span class="name">ostackbase</span> module</h1>
+  <h1 class="title"><span class="name">omfbase</span> module</h1>
   <p>Maintainer: ADAPT</p>
 <p>Author: Paul Bruno</p>
 <p>Provides:</p>
@@ -1099,8 +1099,8 @@ table {
 <li>defaults and utilities for managing Openstack</li>
 </ul>
   
-  <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-ostackbase', this);">Show source &equiv;</a></p>
-  <div id="source-ostackbase" class="source">
+  <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-omfbase', this);">Show source &equiv;</a></p>
+  <div id="source-omfbase" class="source">
     <div class="codehilite"><pre><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">Maintainer: ADAPT</span>
 
@@ -1364,7 +1364,7 @@ table {
   <section id="section-items">
     <h2 class="section-title" id="header-variables">Module variables</h2>
       <div class="item">
-      <p id="ostackbase.env" class="name">var <span class="ident">env</span></p>
+      <p id="omfbase.env" class="name">var <span class="ident">env</span></p>
       
   
   <div class="source_cont">
@@ -1372,7 +1372,7 @@ table {
 
       </div>
       <div class="item">
-      <p id="ostackbase.known_environments" class="name">var <span class="ident">known_environments</span></p>
+      <p id="omfbase.known_environments" class="name">var <span class="ident">known_environments</span></p>
       
   
     <div class="desc"><p>The known Openstack environments to be supported</p></div>
@@ -1384,7 +1384,7 @@ table {
     <h2 class="section-title" id="header-functions">Functions</h2>
       
   <div class="item">
-    <div class="name def" id="ostackbase.check_client_args">
+    <div class="name def" id="omfbase.check_client_args">
     <p>def <span class="ident">check_client_args</span>(</p><p>*args)</p>
     </div>
     
@@ -1397,8 +1397,8 @@ table {
 <p>RETURN:</p>
 <p>INT missing parameter count</p></div>
   <div class="source_cont">
-  <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-ostackbase.check_client_args', this);">Show source &equiv;</a></p>
-  <div id="source-ostackbase.check_client_args" class="source">
+  <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-omfbase.check_client_args', this);">Show source &equiv;</a></p>
+  <div id="source-omfbase.check_client_args" class="source">
     <div class="codehilite"><pre><span class="k">def</span> <span class="nf">check_client_args</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
   <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">  Iterates arguments passed to OMFClient class</span>
@@ -1439,7 +1439,7 @@ table {
   
       
   <div class="item">
-    <div class="name def" id="ostackbase.common_args">
+    <div class="name def" id="omfbase.common_args">
     <p>def <span class="ident">common_args</span>(</p><p>)</p>
     </div>
     
@@ -1457,8 +1457,8 @@ table {
 <p>RETURN:</p>
 <p>ArgumentParser object</p></div>
   <div class="source_cont">
-  <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-ostackbase.common_args', this);">Show source &equiv;</a></p>
-  <div id="source-ostackbase.common_args" class="source">
+  <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-omfbase.common_args', this);">Show source &equiv;</a></p>
+  <div id="source-omfbase.common_args" class="source">
     <div class="codehilite"><pre><span class="k">def</span> <span class="nf">common_args</span><span class="p">():</span>
   <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">  Builds ArgumentParser and fills with common arguments for all OS Clients</span>
@@ -1525,7 +1525,7 @@ table {
   
       
   <div class="item">
-    <div class="name def" id="ostackbase.dump_attributes">
+    <div class="name def" id="omfbase.dump_attributes">
     <p>def <span class="ident">dump_attributes</span>(</p><p>obj)</p>
     </div>
     
@@ -1538,8 +1538,8 @@ table {
 <p>RETURN:</p>
 <p>none</p></div>
   <div class="source_cont">
-  <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-ostackbase.dump_attributes', this);">Show source &equiv;</a></p>
-  <div id="source-ostackbase.dump_attributes" class="source">
+  <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-omfbase.dump_attributes', this);">Show source &equiv;</a></p>
+  <div id="source-omfbase.dump_attributes" class="source">
     <div class="codehilite"><pre><span class="k">def</span> <span class="nf">dump_attributes</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
   <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">  Print a formatted list of attributes on python object</span>
@@ -1569,7 +1569,7 @@ table {
   
       
   <div class="item">
-    <div class="name def" id="ostackbase.print_pretty_dict">
+    <div class="name def" id="omfbase.print_pretty_dict">
     <p>def <span class="ident">print_pretty_dict</span>(</p><p>obj)</p>
     </div>
     
@@ -1582,8 +1582,8 @@ table {
 <p>RETURN:</p>
 <p>None</p></div>
   <div class="source_cont">
-  <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-ostackbase.print_pretty_dict', this);">Show source &equiv;</a></p>
-  <div id="source-ostackbase.print_pretty_dict" class="source">
+  <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-omfbase.print_pretty_dict', this);">Show source &equiv;</a></p>
+  <div id="source-omfbase.print_pretty_dict" class="source">
     <div class="codehilite"><pre><span class="k">def</span> <span class="nf">print_pretty_dict</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
   <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">  Print formatted columns of key valure pairs</span>
@@ -1620,7 +1620,7 @@ table {
   
       
   <div class="item">
-    <div class="name def" id="ostackbase.trace">
+    <div class="name def" id="omfbase.trace">
     <p>def <span class="ident">trace</span>(</p><p>*arg, **kw)</p>
     </div>
     
@@ -1628,8 +1628,8 @@ table {
     
   
   <div class="source_cont">
-  <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-ostackbase.trace', this);">Show source &equiv;</a></p>
-  <div id="source-ostackbase.trace" class="source">
+  <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-omfbase.trace', this);">Show source &equiv;</a></p>
+  <div id="source-omfbase.trace" class="source">
     <div class="codehilite"><pre><span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">arg</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
   <span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
   <span class="n">res</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">arg</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
@@ -1644,7 +1644,7 @@ table {
   
       
   <div class="item">
-    <div class="name def" id="ostackbase.trace_wrapper">
+    <div class="name def" id="omfbase.trace_wrapper">
     <p>def <span class="ident">trace_wrapper</span>(</p><p>func)</p>
     </div>
     
@@ -1657,8 +1657,8 @@ table {
 <p>RETURN:</p>
 <p>function (time delta, function return)</p></div>
   <div class="source_cont">
-  <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-ostackbase.trace_wrapper', this);">Show source &equiv;</a></p>
-  <div id="source-ostackbase.trace_wrapper" class="source">
+  <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-omfbase.trace_wrapper', this);">Show source &equiv;</a></p>
+  <div id="source-omfbase.trace_wrapper" class="source">
     <div class="codehilite"><pre><span class="k">def</span> <span class="nf">trace_wrapper</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
   <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">  Wraps timing around input function</span>
@@ -1691,12 +1691,12 @@ table {
     <h2 class="section-title" id="header-classes">Classes</h2>
       
       <div class="item">
-      <p id="ostackbase.OMFImport" class="name">class <span class="ident">OMFImport</span></p>
+      <p id="omfbase.OMFImport" class="name">class <span class="ident">OMFImport</span></p>
       
   
   <div class="source_cont">
-  <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-ostackbase.OMFImport', this);">Show source &equiv;</a></p>
-  <div id="source-ostackbase.OMFImport" class="source">
+  <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-omfbase.OMFImport', this);">Show source &equiv;</a></p>
+  <div id="source-omfbase.OMFImport" class="source">
     <div class="codehilite"><pre><span class="k">class</span> <span class="nc">OMFImport</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
   <span class="k">pass</span>
 </pre></div>
@@ -1708,14 +1708,14 @@ table {
       <div class="class">
           <h3>Ancestors (in MRO)</h3>
           <ul class="class_list">
-          <li><a href="#ostackbase.OMFImport">OMFImport</a></li>
+          <li><a href="#omfbase.OMFImport">OMFImport</a></li>
           <li>exceptions.Exception</li>
           <li>exceptions.BaseException</li>
           <li>__builtin__.object</li>
           </ul>
           <h3>Class variables</h3>
             <div class="item">
-            <p id="ostackbase.OMFImport.args" class="name">var <span class="ident">args</span></p>
+            <p id="omfbase.OMFImport.args" class="name">var <span class="ident">args</span></p>
             
 
             
@@ -1725,7 +1725,7 @@ table {
 
             </div>
             <div class="item">
-            <p id="ostackbase.OMFImport.message" class="name">var <span class="ident">message</span></p>
+            <p id="omfbase.OMFImport.message" class="name">var <span class="ident">message</span></p>
             
 
             
@@ -1738,13 +1738,13 @@ table {
       </div>
       
       <div class="item">
-      <p id="ostackbase.credentials" class="name">class <span class="ident">credentials</span></p>
+      <p id="omfbase.credentials" class="name">class <span class="ident">credentials</span></p>
       
   
     <div class="desc"><p>Basic credentials parser class</p></div>
   <div class="source_cont">
-  <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-ostackbase.credentials', this);">Show source &equiv;</a></p>
-  <div id="source-ostackbase.credentials" class="source">
+  <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-omfbase.credentials', this);">Show source &equiv;</a></p>
+  <div id="source-omfbase.credentials" class="source">
     <div class="codehilite"><pre><span class="k">class</span> <span class="nc">credentials</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
   <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">  Basic credentials parser class&#39;&#39;&#39;</span>
@@ -1781,12 +1781,12 @@ table {
       <div class="class">
           <h3>Ancestors (in MRO)</h3>
           <ul class="class_list">
-          <li><a href="#ostackbase.credentials">credentials</a></li>
+          <li><a href="#omfbase.credentials">credentials</a></li>
           <li>__builtin__.object</li>
           </ul>
           <h3>Instance variables</h3>
             <div class="item">
-            <p id="ostackbase.credentials.domain" class="name">var <span class="ident">domain</span></p>
+            <p id="omfbase.credentials.domain" class="name">var <span class="ident">domain</span></p>
             
 
             
@@ -1797,7 +1797,7 @@ table {
 
             </div>
             <div class="item">
-            <p id="ostackbase.credentials.host" class="name">var <span class="ident">host</span></p>
+            <p id="omfbase.credentials.host" class="name">var <span class="ident">host</span></p>
             
 
             
@@ -1808,7 +1808,7 @@ table {
 
             </div>
             <div class="item">
-            <p id="ostackbase.credentials.password" class="name">var <span class="ident">password</span></p>
+            <p id="omfbase.credentials.password" class="name">var <span class="ident">password</span></p>
             
 
             
@@ -1819,7 +1819,7 @@ table {
 
             </div>
             <div class="item">
-            <p id="ostackbase.credentials.project" class="name">var <span class="ident">project</span></p>
+            <p id="omfbase.credentials.project" class="name">var <span class="ident">project</span></p>
             
 
             
@@ -1830,7 +1830,7 @@ table {
 
             </div>
             <div class="item">
-            <p id="ostackbase.credentials.user" class="name">var <span class="ident">user</span></p>
+            <p id="omfbase.credentials.user" class="name">var <span class="ident">user</span></p>
             
 
             
@@ -1843,7 +1843,7 @@ table {
           <h3>Methods</h3>
             
   <div class="item">
-    <div class="name def" id="ostackbase.credentials.__init__">
+    <div class="name def" id="omfbase.credentials.__init__">
     <p>def <span class="ident">__init__</span>(</p><p>self, environment)</p>
     </div>
     
@@ -1851,8 +1851,8 @@ table {
     
   
   <div class="source_cont">
-  <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-ostackbase.credentials.__init__', this);">Show source &equiv;</a></p>
-  <div id="source-ostackbase.credentials.__init__" class="source">
+  <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-omfbase.credentials.__init__', this);">Show source &equiv;</a></p>
+  <div id="source-omfbase.credentials.__init__" class="source">
     <div class="codehilite"><pre><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">environment</span><span class="p">):</span>
   <span class="k">if</span> <span class="ow">not</span> <span class="n">environment</span> <span class="ow">in</span> <span class="n">known_environments</span><span class="p">:</span>
     <span class="k">print</span> <span class="s">&#39;{0} is not a supported environment&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">environment</span><span class="p">)</span>
