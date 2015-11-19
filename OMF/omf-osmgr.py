@@ -841,6 +841,7 @@ if __name__ == '__main__':
       
       os_client.log_and_print_info('\nAvailable Flavors:')
       _process_nova_show(nova_session.get_flavors())
+
     if (_args['show'] == 'servers'):
       os_client.log_and_print_info('\nAvailable servers:')
 
@@ -1173,7 +1174,7 @@ if __name__ == '__main__':
     _setup_client(client='heat')
     heat_session = __heatclient()
 
-    with open('test_stack_create') as f:
+    with open('../templates/test_stack_create') as f:
       data = f.read()
       f.close()
 
@@ -1214,10 +1215,11 @@ if __name__ == '__main__':
 
     nova_session = __novaclient()
 
+    
     try:
-      f = open('test_server_create')
+      f = open('../templates/test_server_create')
     except Exception as e:
-      os_client.log_and_exit(e, 109)
+      os_client.log_and_exit(e, 1609)
 
     cfg = {i.split("=")[0] : i.split("=")[1].strip() for i in f.readlines()}
 
@@ -1244,7 +1246,7 @@ if __name__ == '__main__':
     volconfig = None
 
     try: 
-      with open('test_volume_create', 'r') as f:
+      with open('../templates/test_volume_create', 'r') as f:
         j = f.read()
         volconfig = ast.literal_eval(j)     
     except Exception as e:
