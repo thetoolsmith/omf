@@ -4,14 +4,14 @@
 
 #pdoc generates ONLY public methods and variables. so functions starting with _ are not included
 
-#generate these three first, then copy to local python lib path
+#generate these two first, then copy to local python lib path
 #/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7 on mac
 
-pdoc ostackbase.py --html --overwrite --html-dir docs/
+pdoc omfbase.py --html --overwrite --html-dir docs/
 pdoc omfcodes.py --html --overwrite --html-dir docs/
-pdoc omf_client.py --html --overwrite --html-dir docs/
 
 #generate the remaining modules
+pdoc omf_client.py --html --overwrite --html-dir docs/
 pdoc omf_glance.py --html --overwrite --html-dir docs/
 pdoc omf_nova.py --html --overwrite --html-dir docs/
 
