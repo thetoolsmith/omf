@@ -1,0 +1,10 @@
+{ 
+  'name': 'test-volume-create', 
+  'size': 4, 
+  'metadata': 
+  {
+    'foo': 'val1xxxxxx', 
+    'bar': 'val2yyyy'
+  } 
+}
+

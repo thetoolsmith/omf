@@ -1,0 +1,4 @@
+network=newnet
+image=centos7
+flavor=m1medium
+name=test-server-create

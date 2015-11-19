@@ -1,0 +1,13 @@
+heat_template_version: 2014-10-16
+
+description: test template for pbruno
+
+resources:
+  my_instance:
+    type: OS::Nova::Server
+    properties:
+      image: CentOS7
+      flavor: m1.medium
+      networks:
+        - network: newnet
+

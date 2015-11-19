@@ -1,0 +1,5 @@
+this folder should contain blank templates used for testing api functionality.
+try to keep them generic, but some things will need to exit such as networks. 
+We don't want to spin up new networks just to excecise an api of openstack.
+
+
