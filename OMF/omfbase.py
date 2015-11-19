@@ -13,7 +13,7 @@ from sets import Set
 from datetime import datetime, timedelta
 import time
 import argparse
-
+import ast
 import omf_client
 
 known_environments = [env.strip() for env in open('../credentials/environments', 'r')]
@@ -225,9 +225,61 @@ def trace(func, *args, **kwargs):
   '''
   return func(*args, **kwargs)
 
+def print_pretty_columns(obj, columns):
+  '''
+  Print formatted columns.
+  Get length of columns to determine how many columns
+  
+  INPUTS:
+ 
+   LIST obj - generic list object to iterate
+
+   LIST columns - ordered list of column names to show
+
+  RETURN:
+
+   None
+  '''
+
+  if not obj or not columns:
+    return
+
+  column_index = 0
+
+  meta_column = [0 for x in range(len(columns))]
+
+  pad = 2
+
+  try:
+    for x in obj:
+      tctr = 0
+      while tctr < len(columns):
+        meta_column[tctr] = max(meta_column[tctr], len(unicode(getattr(x, columns[tctr]))))
+        tctr+=1
+
+    ''' at this point we have the max mength of each column in columns[] '''
+    ctr = 0
+    for x in obj:
+      tctr = 0
+      output = ''
+      while tctr < len(columns):
+        meta_column[tctr] = max(meta_column[tctr], len(unicode(getattr(x, columns[tctr]))))
+
+        output = output + unicode(getattr(x, columns[tctr])).ljust(meta_column[tctr]+pad, ' ')
+        tctr+=1
+
+      print output
+
+  except Exception as e:
+    exc_type, exc_value, exc_traceback = sys.exc_info()
+    traceback.print_exception(exc_type, exc_value, exc_traceback, limit = 3, file = sys.stdout)
+    raise RuntimeError('{0}\n{1}'.format(e, type(e)))
+
+  return
+
 def print_pretty_dict(obj):
   '''
-  Print formatted columns of key valure pairs
+  Print formatted columns of key value pairs
 
   INPUT:
 

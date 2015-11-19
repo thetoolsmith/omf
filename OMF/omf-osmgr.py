@@ -838,9 +838,12 @@ if __name__ == '__main__':
         omfbase.print_pretty_dict(image)
 
     if (_args['show'] == 'flavors'):
-      
       os_client.log_and_print_info('\nAvailable Flavors:')
-      _process_nova_show(nova_session.get_flavors())
+      omfbase.print_pretty_columns(nova_session.get_flavors(), ['name','human_id','id','ram'])
+
+      #for f in nova_session.get_flavors():
+      #  os_client.log_and_print_info('{0}\t{1}\t{2}'.format(f.name,f.human_id,f.id))
+      #_process_nova_show(nova_session.get_flavors())
 
     if (_args['show'] == 'servers'):
       os_client.log_and_print_info('\nAvailable servers:')
