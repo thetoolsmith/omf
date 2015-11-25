@@ -1,6 +1,6 @@
 heat_template_version: 2014-10-16
 
-description: test template for pbruno
+description: test template for stack create
 
 resources:
   my_instance:

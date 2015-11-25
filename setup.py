@@ -21,7 +21,6 @@ def get_files(src):
 setup(name='omf',
       version='1.0.0',
       description='Openstack Management Framework',
-      maintainer='ADAPT',
       author='Paul Bruno',
       author_email='paul@autoagentframework.com',
       py_modules=['omf_nova','omf_glance', 'omf_cinder', 'omf_neutron', 'omf_ceilometer', 'omf_heat', 'omf_keystone', 'omf_client', 'omfbase', 'omfcodes'],

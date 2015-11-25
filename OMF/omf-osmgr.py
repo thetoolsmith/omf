@@ -1,6 +1,4 @@
 '''
-MAINTAINER: ADAP
-
 AUTHOR: PAUL BRUNO
 
 command line utility to manage openstack using OMF

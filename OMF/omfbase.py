@@ -1,6 +1,4 @@
 '''
-Maintainer: ADAPT
-
 Author: Paul Bruno
 
 Provides:
