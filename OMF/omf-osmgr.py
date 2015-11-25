@@ -181,32 +181,45 @@ def powerdown_node(node=None):
 
     * BOOL True | False
   '''
-  print "***power down not implemented yet!"
 
-  return 0
+  os_client.log_and_print_info('power down not implemented yet, just return True')
+
+  return True
 
 
 def _evacuate(instance):
+
   if (debug):
-    print "evacuating", instance
+    os_client.log_and_print_info('Evacuating {0}'.format(instance))
 
   try:
     nova_session.client.servers.evacuate(instance, host=None, on_shared_storage=True, password=None)
   except Exception as e:
     os_client.log_exception(e)
-    return 1
+    return True
 
-  return
+  return False
 
 
 def evacuate_host(host_instances=None):
+  '''
+  Calls native openstack host evacuate methods
 
+  INPUT:
+
+    * LIST host instances
+
+  RETURN:
+
+    INT failed count 
+
+  '''  
   if (not host_instances):
     return 0
 
   failed = []
 
-  # FIRST CALL CISCO UCS AND POWER DOWN THE MACHINE BEFORE EVACUATION ROUTINE
+  # FIRST CALL METHOD TO POWER DOWN THE MACHINE BEFORE EVACUATION ROUTINE
 
   for i in host_instances:
     __evacuating_node = i['uuid']
@@ -217,6 +230,7 @@ def evacuate_host(host_instances=None):
       continue
 
     runningtime, obj = omfbase.trace(_evacuate, i['uuid'])
+
     if (debug):
       os_client.log_and_print_info('Evacuate {0}:{1} took: {2}'.format(i['name'],i['uuid'], runningtime)) 
     else:

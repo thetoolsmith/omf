@@ -19,7 +19,7 @@ USE EXAMPLES:
 
   * print ec.codes  (get all codes available)
 
-  * print ec.get(100) (get specific code DESCRIPTOR from known int code)
+  * print ec.get(1500) (get specific code DESCRIPTOR from known int code)
 
   * print ec.get('OMF_NOVA_FAILED_CLIENT_INIT') (get specific EXIT CODE from known descriptor)
 
