@@ -30,27 +30,42 @@ class credentials(object):
 
   def __init__(self, environment):
 
-    if not environment in known_environments:
-      print '{0} is not a supported environment'.format(environment)
+    def _out(m):
+      print m
       sys.stderr.write('1510')
       sys.exit(151)
 
+    if not environment in known_environments:
+      _out('{0} is not a supported environment'.format(environment))
+
     creds = {i.strip().split("=")[0] : i.strip().split("=")[1] for i in open('../credentials/{0}'.format(environment), 'r')}
 
-    self.host = creds['host']
-    '''the openstack host url'''
+    try:
+      self.host = creds['host']
+      '''the openstack host url'''
+    except:
+      _out('Missing host in credentials file {0}'.format('../credentials/{0}'.format(environment)))
+    try:
+      self.user = creds['user']
+      '''the openstack user account'''
+    except:
+      _out('Missing user in credentials file {0}'.format('../credentials/{0}'.format(environment)))
+    try:
+      self.password = creds['password']
+      '''the openstack user password'''
+    except:
+      _out('Missing password in credentials file {0}'.format('../credentials/{0}'.format(environment)))
+    try:
+      self.project = creds['project']
+      '''the openstack tenant'''
+    except:
+      _out('Missing project in credentials file {0}'.format('../credentials/{0}'.format(environment)))
+    try:
+      self.domain = creds['domain']
+      '''the openstack domain'''
+    except:
+      _out('Missing domain in credentials file {0}'.format('../credentials/{0}'.format(environment)))
 
-    self.user = creds['user']
-    '''the openstack user account'''
-
-    self.password = creds['password']
-    '''the openstack user password'''
-
-    self.project = creds['project']
-    '''the openstack tenant'''
-
-    self.domain = creds['domain']
-    '''the openstack domain'''
 
 def dump_attributes(obj):
   '''
