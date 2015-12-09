@@ -5,7 +5,6 @@ from setuptools import setup
 # build: python setup.py bdist_egg
 # mac install tar.gz
 # gunzip -c omf-1.0.0.tar.gz | tar xopf -
-# test change
 
 
 def get_files(src):
